@@ -6,9 +6,11 @@ import { getAllProducts, getProduct } from '../../shopify/shopify'
 const ProductPage = ({product}) => {
 
   return (
-    <div> 
-      <ProductContent product={product}/>
-    </div>
+
+      <div className='md:mt-40'>
+        <ProductContent product={product}/>
+      </div>
+
   )
 }
 

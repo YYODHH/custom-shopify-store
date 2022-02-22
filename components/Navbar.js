@@ -1,15 +1,15 @@
 import Link from 'next/link'
-// import { useContext } from 'react'
-// import { CartContext } from '../context/shopContext'
-// import MiniCart from './MiniCart'
+import { useContext } from 'react'
+import { CartContext } from '../shopify/shopContext'
+import MiniCart from './MiniCart'
 
 export default function Navbar() {
-//   const { cart, cartOpen, setCartOpen } = useContext(CartContext)
+  const { cart, cartOpen, setCartOpen } = useContext(CartContext)
 
-//   let cartQuantity = 0
-//   cart.map(item => {
-//     return (cartQuantity += item?.variantQuantity)
-//   })
+  let cartQuantity = 0
+  cart.map(item => {
+    return (cartQuantity += item?.variantQuantity)
+  })
 
   return (
     <header className="border-b sticky top-0 z-20 bg-white">
@@ -22,11 +22,13 @@ export default function Navbar() {
           </a>
         </Link>
         <a 
-          className="text-md font-bold cursor-pointer">
+          className="text-md font-bold cursor-pointer"
+          onClick={() => setCartOpen(!cartOpen)}
+          >
 
-          Cart 
+          Cart({cartQuantity})
         </a>
-        {/* <MiniCart cart={cart} /> */}
+        <MiniCart cart={cart} />
       </div>
     </header>
   )
