@@ -38,7 +38,6 @@ export default function ProductSelector({ product }) {
     variant.node.selectedOptions.map(item => {
       allOptions[item.name] = item.value
     })
-    console.log(variant.node.image.url)
     return {
       id: variant.node.id,
       title: product.title,
@@ -113,9 +112,8 @@ export default function ProductSelector({ product }) {
           <button
             onClick={() => {
               addToCart(selectedVariant)
-              console.log(selectedVariant)
             }}
-            className="bg-black rounded-lg text-white px-2 py-3 mt-3 hover:bg-gray-800">Add To Card
+            className="bg-violet-700 rounded-lg text-white px-2 py-3 mt-3 hover:bg-violet-900">Add To Card
           </button> 
         //   <button
         //     className="rounded-lg text-white px-2 py-3 mt-3 bg-gray-800 cursor-not-allowed">

@@ -24,7 +24,7 @@ export default function OptionSelector({ name, values, selectedOptions, setOptio
                     setOptions(name, value)
                   }}
                 />
-                <div className={`p-2 mt-3 text-lg rounded-full block cursor-pointer mr-3 ${checked ? "text-white bg-gray-900" : "text-gray-900 bg-gray-200"}`}>
+                <div className={`p-1 mt-3 mb-3 text-md rounded-md block cursor-pointer mr-3 ${checked ? "text-white bg-violet-700" : "text-gray-900 bg-gray-100"}`}>
                   <span className="px-2">{value}</span>
                 </div>
               </label>

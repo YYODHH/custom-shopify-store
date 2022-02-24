@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useContext } from 'react'
 import { CartContext } from '../shopify/shopContext'
 import MiniCart from './MiniCart'
+import { ShoppingCartIcon } from '@heroicons/react/solid'
 
 export default function Navbar() {
   const { cart, cartOpen, setCartOpen } = useContext(CartContext)
@@ -22,11 +23,11 @@ export default function Navbar() {
           </a>
         </Link>
         <a 
-          className="text-md font-bold cursor-pointer"
+          className="text-md font-bold cursor-pointer hover:tex-gray-500"
           onClick={() => setCartOpen(!cartOpen)}
           >
 
-          Cart({cartQuantity})
+           <p> <ShoppingCartIcon className='inline'/>({cartQuantity})</p>
         </a>
         <MiniCart cart={cart} />
       </div>

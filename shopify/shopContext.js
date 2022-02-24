@@ -5,7 +5,6 @@ const CartContext = createContext()
 
 export default function ShopProvider({ children }) {
   const [cart, setCart] = useState([])
-  console.log(cart)
   const [cartOpen, setCartOpen] = useState(false)
   const [checkoutId, setCheckoutId] = useState('')
   const [checkoutUrl, setCheckoutUrl] = useState('')
